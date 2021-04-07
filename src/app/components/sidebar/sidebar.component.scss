@@ -1,0 +1,119 @@
+$gray:#A4A6B3;
+$primary-dark: #3C3B54;
+$opacity-background-active: 0.08;
+$font-mulish: 'Mulish',
+sans-serif;
+$icon-gray: #9FA2B4;
+$color-submenu-disable:#B4AEAE;
+
+#sidebar {
+  background-color: $primary-dark;
+  border-top-right-radius: 72px;
+  height: 100%;
+  color: #FFFFFF;
+
+  #sidebar-header {
+    height: 10%;
+
+    // p{
+    //     font-size: 19px;
+    //     line-height: 50px;
+    //     font-family: $font-mulish;
+    //     padding-left: 76px;
+    //     display: flex;
+    //     align-items: center;
+    //     color:$gray;
+    //     font-weight: 900;
+    // }
+    .sidebar-header-content {
+      display: inline-flex;
+      height: 100%;
+      align-items: center;
+      padding: 0 46px;
+      p{
+        font-size: 19px;
+        color:$gray;
+        font-weight: 900;
+        font-family: $font-mulish;
+        margin-left: 10px;
+        margin-top: 12px;
+      }
+      i{
+          font-size: 24px;
+      }
+    }
+  }
+
+  #sidebar-content {
+    height: 75%;
+  }
+
+  #sidebar-footer {
+    height: 15%;
+  }
+}
+
+.pr-menu {
+  width: 100%;
+  padding: 0;
+
+  .pr-menu-content {
+    position: relative;
+    height: 56px;
+    line-height: 56px;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+      height: 56px;
+      width: 100%;
+      line-height: 56px;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        color: white;
+        background-color: white;
+        left: 0;
+        top: 0;
+        width: 10px;
+        height: 100%;
+        left: 2%;
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+      i {
+        font-size: 16px;
+        color: $icon-gray;
+        padding-left: 50px;
+      }
+
+      span {
+        font-size: 16px;
+        color: #FFFFFF;
+        margin-left: 10px;
+      }
+
+    }
+
+    .sub-menu {
+      .sub-menu-content {
+        list-style-type: none;
+
+        a {
+          font-size: 16px;
+          margin-left: 41px;
+          color: $color-submenu-disable;
+        }
+      }
+    }
+
+  }
+}
+
+.active-submenu {
+  color: white !important;
+}

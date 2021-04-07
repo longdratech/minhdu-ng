@@ -1,0 +1,60 @@
+<div id="sidebar" style="width:279px">
+  <div id="sidebar-header" class="row">
+    <div class="sidebar-header-content">
+        <i class="fa fa-cog"></i>
+        <p>PT1</p>
+    </div>
+    <hr />
+  </div>
+  <div id="sidebar-content" class="row mt-1">
+    <ul class="pr-menu">
+      <li class="pr-menu-content">
+        <a>
+          <i class="fa fa-cog"></i>
+          <span>Báo cáo và thống kê</span>
+        </a>
+      </li>
+      <li class="pr-menu-content">
+        <a (click)="showSubMenu()">
+          <i class="fa fa-cog"></i>
+          <span>Nhân sự</span>
+        </a>
+        <ul class="sub-menu" *ngIf="isShow">
+          <li class="sub-menu-content">
+            <a routerLink="/nhanvien" routerLinkActive='active-submenu'> 
+              Danh sách nhân viên
+            </a>
+          </li>
+          <li class="sub-menu-content">
+            <a routerLink="/salary" routerLinkActive='active-submenu'> 
+              Tính lương
+            </a>
+          </li>
+          <li class="sub-menu-content">
+            <a routerLink="/salary" routerLinkActive='active-submenu'> 
+              Xuất phiếu lương
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div id="sidebar-footer" class="row">
+    <hr />
+    <ul class="pr-menu">
+        <li class="pr-menu-content">
+          <a>
+            <i class="fa fa-cog"></i>
+            <span style="font-weight: 400;">Settings</span>
+          </a>
+        </li>
+        <li class="pr-menu-content">
+            <a>
+              <i class="fa fa-cog"></i>
+              <span style="font-weight: 400;">Subscription</span>
+            </a>
+          </li>
+      </ul>
+  </div>
+</div>
+<router-outlet></router-outlet>
