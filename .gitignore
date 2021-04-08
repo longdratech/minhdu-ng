@@ -45,8 +45,12 @@ testem.log
 .DS_Store
 Thumbs.db
 
+<<<<<<< HEAD
 # lock
 package-lock.json
 yarn.lock
 
 documentation
+=======
+documentation
+>>>>>>> 707d75962af6463f1d1c2cba12a3d714dd5dfd7b
