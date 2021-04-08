@@ -1,0 +1,12 @@
+<span *ngIf="!borderColor" class="{{className}}"
+    style="color: {{color}}; 
+    background-color: {{backgroundColor}};"
+>
+    {{name}}
+</span>
+<span *ngIf="borderColor"class="{{className}}"
+    style="color: {{color}}; 
+    background-color: {{backgroundColor}}; border: 1px solid {{borderColor}}"
+    >
+    {{name}}
+</span>
