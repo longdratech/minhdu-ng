@@ -10,33 +10,23 @@ $color-submenu-disable:#B4AEAE;
   background-color: $primary-dark;
   border-top-right-radius: 72px;
   height: 100%;
+  width:297px;
   color: #FFFFFF;
-
   #sidebar-header {
     height: 10%;
-
-    // p{
-    //     font-size: 19px;
-    //     line-height: 50px;
-    //     font-family: $font-mulish;
-    //     padding-left: 76px;
-    //     display: flex;
-    //     align-items: center;
-    //     color:$gray;
-    //     font-weight: 900;
-    // }
     .sidebar-header-content {
-      display: inline-flex;
+      display: flex;
       height: 100%;
       align-items: center;
       padding: 0 46px;
       p{
         font-size: 19px;
         color:$gray;
-        font-weight: 900;
-        font-family: $font-mulish;
+        font-weight: 500;
+        // font-family: $font-mulish;
         margin-left: 10px;
         margin-top: 12px;
+        letter-spacing: 1.2px;
       }
       i{
           font-size: 24px;
@@ -45,23 +35,23 @@ $color-submenu-disable:#B4AEAE;
   }
 
   #sidebar-content {
-    height: 75%;
+    height: 70%;
   }
 
   #sidebar-footer {
-    height: 15%;
+    height: 20%;
   }
 }
 
 .pr-menu {
   width: 100%;
+  list-style: none;
   padding: 0;
-
   .pr-menu-content {
     position: relative;
     height: 56px;
     line-height: 56px;
-
+    padding: 0 47px;
     &:hover {
       background-color: rgba(255, 255, 255, 0.08);
       height: 56px;
@@ -76,9 +66,9 @@ $color-submenu-disable:#B4AEAE;
         background-color: white;
         left: 0;
         top: 0;
-        width: 10px;
+        width: 5px;
         height: 100%;
-        left: 2%;
+        // left: 2%;
       }
     }
 
@@ -88,7 +78,7 @@ $color-submenu-disable:#B4AEAE;
       i {
         font-size: 16px;
         color: $icon-gray;
-        padding-left: 50px;
+        // padding-left: 50px;
       }
 
       span {
@@ -100,12 +90,13 @@ $color-submenu-disable:#B4AEAE;
     }
 
     .sub-menu {
+      width: 100%;
+      padding: 0 25px;
       .sub-menu-content {
         list-style-type: none;
-
         a {
           font-size: 16px;
-          margin-left: 41px;
+          // margin-left: 41px;
           color: $color-submenu-disable;
         }
       }
