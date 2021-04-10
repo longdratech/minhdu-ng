@@ -1,35 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+const listFetchMenu  = [
+  {
+    path: '/welcome', title: 'dashboard', icon: 'dashboard', subMenu: []
+  },
+  {
+    path: '/employee', title: 'Nhân viên', icon: 'user',
+    subMenu: [
+      { path: '/employee', title: 'Danh sách nhân viên', icon: '' },
+    ]
+  },
+];
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
-export class SidebarComponent implements OnInit {
-  titleHeader: string = "PT1";
-  iconHeader: string = "fa fa-th-large";
-  subTitle: any = [
-    {
-      path: '', class: '', title: 'Báo cáo và thống kê', icon: 'down', submenu: []
-    },
-    {
-      path: '/nhanvien', class: '', title: 'Báo cáo và thống kê', icon: 'down', submenu: []
-    },
-    {
-      path: '/nhanvien', class: 'has-sub', title: 'Nhân viên 1', icon: 'down',
-      submenu: [
-        { path: '/', title: 'Danh sách nhân viên', icon: '' },
-        { path: '/salary', title: 'Tính lương', icon: '' },
-      ]
-    },
-    {
-      path: '/nhanvien', class: 'has-sub', title: 'Nhân viên 1', icon: 'down',
-      submenu: [
-        { path: '/danhsach', title: 'Danh sách nhân viên', icon: '' },
-        { path: '/salary', title: 'Tính lương', icon: '' },
-      ]
-    },
-  ]
+
+export class SideBarComponent implements OnInit {
+
+  @Input() isCollapsed!: boolean | string;
+  @Input() listMenu = listFetchMenu;
+  @Input() indexActive: string | number = 0;
+  @Input() classActive: string | number = listFetchMenu[0].path;
+
   constructor() { }
 
   ngOnInit(): void {

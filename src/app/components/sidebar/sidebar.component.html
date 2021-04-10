@@ -1,43 +1,37 @@
-<div id="sidebar">
-  <div id="sidebar-header">
-    <div class="sidebar-header-content">
-      <i class="{{iconHeader}}"></i>
-      <p>{{titleHeader}}</p>
-      <button><i nz-icon nzType="close" nzTheme="outline"></i></button>
-    </div>
-    <nz-divider></nz-divider>
-  </div>
-  <div id="sidebar-content">
-    <ul nz-menu nzTheme="dark" nzMode="inline" *ngFor="let item of subTitle">
-      <li class="title" nz-submenu nzTitle="{{item.title}}" nzIcon="{{item.icon}}">
-        <ul *ngFor="let subMenuItem of item.submenu">
-          <li nz-menu-item>{{subMenuItem.title}}</li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <div id="sidebar-footer">
-    <nz-divider></nz-divider>
-    <div class="sidebar-footer-content">
-      <ul class="pr-menu">
-        <li class="pr-menu-content">
-          <div class="pr-title">
-            <a>
-              <i class="fa fa-th-large"></i>
-              <span>Settings</span>
-            </a>
-          </div>
-        </li>
-        <li class="pr-menu-content">
-          <div class="pr-title">
-            <a>
-              <i class="fa fa-th-large"></i>
-              <span>Subscription</span>
-            </a>
-          </div>
+<ul nz-menu nzTheme="dark" class="listMenu" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+
+  <ng-container *ngFor="let menu of listMenu ; index as i">
+    <li *ngIf="menu.subMenu.length >0 else menuTemplate"
+      nz-submenu 
+      [nzOpen]="i === indexActive ? true : false" 
+      [nzTitle]="menu.title" 
+      [nzIcon]="menu.icon" 
+      class='itemParent hasSub {{menu.path == classActive ? "hasSubActive" : ""}}'>
+      <ul *ngFor="let subMenu of menu.subMenu" >
+        <li nz-menu-item nzMatchRouter>
+          <a [routerLink]="subMenu.path">{{subMenu.title}}</a>
         </li>
       </ul>
-    </div>
-  </div>
-  <p></p>
-</div>
+    </li>
+    <ng-template #menuTemplate>
+      <li nz-menu-item nzMatchRouter class="noneSub" >
+        <i nz-icon [nzType]="menu.icon"></i>
+        <a [routerLink]="menu.path" >{{isCollapsed == true ? "" : menu.title}}</a>
+      </li>
+    </ng-template>
+
+  </ng-container>
+
+    <!-- <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard" routerLink="/welcome" class="itemParent">
+      <ul>
+        <li nz-menu-item nzMatchRouter>
+          <a routerLink="/welcome">Welcome</a>
+        </li>
+      </ul>
+    </li> -->
+    <!-- <li nz-menu-item routerLink="/employee" >
+      <i nz-icon nzType="mail"></i>
+      <span>employee</span>
+    </li> -->
+    
+  </ul>
