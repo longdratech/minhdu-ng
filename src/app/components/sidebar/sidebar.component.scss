@@ -1,0 +1,162 @@
+$gray:#A4A6B3;
+$primary-dark: #3C3B54;
+$opacity-background-active: 0.08;
+$font-mulish: 'Mulish',
+sans-serif;
+$icon-gray: #9FA2B4;
+$color-submenu-disable:#B4AEAE;
+
+#sidebar {
+  background-color: $primary-dark;
+  border-top-right-radius: 72px;
+  height: 100%;
+  width: 297px;
+  color: #FFFFFF;
+  #sidebar-header {
+    height: 8%;
+    padding-top: 35px;
+    .sidebar-header-content {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      padding: 0 46px;
+      position: relative;
+      p {
+        font-size: 19px;
+        color: $gray;
+        font-weight: 500;
+        margin-left: 10px;
+        margin-top: 12px;
+        letter-spacing: 1.2px;
+      }
+
+      i {
+        font-size: 24px;
+      }
+      button{
+        background:$primary-dark;
+        border:none;
+        position: absolute;
+        right: 19%;
+        &:focus{
+          border:none;
+          i{
+            color:white;
+          }
+        }
+        i{
+          color: $gray;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  #sidebar-content {
+    margin-top: 40px;
+    height: 67%;
+    overflow-y: auto;
+    ul{
+      background-color: $primary-dark;
+      color: white;
+      font-size: 16px;
+    }
+  }
+
+  #sidebar-footer {
+    height: 25%;
+  }
+}
+.pr-menu {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+
+  .pr-menu-content {
+    line-height: 56px;
+    display: block;
+    position: relative;
+    .pr-title {
+      padding: 0 47px;
+      a {
+        text-decoration: none;
+
+        i {
+          font-size: 16px;
+          color: $icon-gray;
+        }
+
+        span {
+          font-size: 16px;
+          color: #FFFFFF;
+          margin-left: 10px;
+        }
+      }
+
+    }
+
+  }
+}
+// sidebar content
+::ng-deep .ant-menu-dark .ant-menu-sub, .ant-menu.ant-menu-dark, .ant-menu.ant-menu-dark .ant-menu-sub{
+  background-color: $primary-dark !important;
+}
+::ng-deep .ng-tns-c39-0.ant-menu.ant-menu-inline.ant-menu-sub.ng-trigger.ng-trigger-collapseMotion.ng-star-inserted{
+  background:  $primary-dark !important;
+  border-right: none;
+}
+
+.title{
+  position: relative;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    width: 100%;
+    line-height: 56px;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      color: white;
+      background-color: white;
+      left: 0;
+      top: 0;
+      width: 5px;
+      height: 43px;
+    }
+  }
+}
+
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected, .ant-menu.ant-menu-dark .ant-menu-item-selected{
+  background: $primary-dark;
+}
+.ant-menu-submenu-open{
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.08);
+  width: 100%;
+  line-height: 56px;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    color: white;
+    background-color: white;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 43px;
+  }
+}
+::ng-deep.ant-menu-dark .ant-menu-submenu-open>.ant-menu-submenu-title>.ant-menu-submenu-arrow::before{
+  background: $primary-dark !important;
+}
+::ng-deep .ant-menu-dark .ant-menu-submenu-open>.ant-menu-submenu-title>.ant-menu-submenu-arrow::after{
+  background: $primary-dark !important;
+}
+::ng-deep .ant-menu.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow::before{
+  background: $primary-dark !important;
+}
+::ng-deep .ant-menu.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow::after{
+  background: $primary-dark !important;
+  
+}
