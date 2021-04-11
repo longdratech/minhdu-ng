@@ -1,0 +1,76 @@
+$primarydark: #3C3B54;
+$ligthgrey: #EBEBEB;
+$accentblue: #7749F8;
+$accentinput:#ABB5BE;
+$hotred:#EB5757;
+#buttonLoading {
+  background: $primarydark;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+#buttonCancel {
+  background: $ligthgrey;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  color: $primarydark;
+}
+
+::ng-deep .ant-modal-header {
+  border-bottom: none;
+}
+
+::ng-deep .ant-modal-footer {
+  border-top: none;
+  text-align: left;
+}
+
+::ng-deep .ant-modal-close-x {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  width: 84px;
+
+  &::before {
+    content: "Close";
+    color: $accentblue;
+  }
+
+  i {
+    background: $accentblue;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: 10px;
+    color: white;
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+::ng-deep .ant-modal-close{
+    margin-top: 6px;
+    margin-right: 6px;
+}
+
+.plus-employee-salary{
+  border:none;
+  background: white;
+  border-radius: 4px;
+  color:$accentblue;
+}
+.btn-edit-employee{
+  border:none;
+  background: $accentinput;
+  border-radius: 4px;
+  color:white;
+}
+.btn-delete-employee{
+  border:none;
+  background: $hotred;
+  border-radius: 4px;
+  color:white;
+}
