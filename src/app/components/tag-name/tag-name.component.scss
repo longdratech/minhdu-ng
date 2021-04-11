@@ -1,0 +1,26 @@
+
+.app-position-tag{
+    padding: 8px 18px;
+    border-radius: 30px;
+}
+.app-employee-tag{
+    display: block;
+    border-radius: 30px;
+    background-color: #fff;
+    width: 100%;
+    span{
+        display: block;
+        padding: 8px 18px;
+        border-radius: 30px;
+    }
+
+}
+.app-payment-status-tag{
+  padding: 15px 20px 8px;
+  border-bottom-right-radius: 20px;
+    margin: 10px;
+}
+.app-employee-code-tag{
+    padding: 8px 18px;
+    border-radius: 5px
+}
