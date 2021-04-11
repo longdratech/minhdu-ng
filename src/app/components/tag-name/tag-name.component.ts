@@ -1,4 +1,3 @@
-
 /* * Use
 * <app-tag-name backgroundColor="#15cd96" colorName="#fff"></app-tag-name>
 * <app-tag-name className="app-employee-code-tag" name="app-employee-code-tag"  borderColor="red" colorName="#fff"></app-tag-name>
@@ -6,10 +5,10 @@
 * <app-tag-name className="app-payment-status-tag" backgroundColor="#15cd96" colorName="#fff"></app-tag-name>
 */
 
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 type ClassTagName = 'app-position-tag' | 'app-payment-status-tag' | 'app-employee-code-tag' | 'app-employee-tag';
-type Color = 'white' | '#15cd96' | '#EB5757' | string ;
+type Color = 'white' | '#15cd96' | '#EB5757' | string;
 type BorderColor = 'none' | Color;
 
 @Component({
@@ -19,19 +18,17 @@ type BorderColor = 'none' | Color;
 })
 
 export class TagNameComponent implements OnInit {
-
   @Input() className: ClassTagName = 'app-position-tag';
   @Input() name = 'tag name';
   @Input() code = 'Code0129829832389';
   @Input() colorName: Color = '#EB5757';
   @Input() colorCode: Color = '#15cd96';
   @Input() backgroundColor: Color = 'white';
-  @Input() borderColor: BorderColor = 'none' ;
+  @Input() borderColor: BorderColor = 'none';
 
-  constructor() { }
-
-  ngOnInit(): void {
-
+  constructor() {
   }
 
+  ngOnInit(): void {
+  }
 }
