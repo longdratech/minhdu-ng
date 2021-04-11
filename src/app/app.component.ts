@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
   @Input() pageName = 'PT 1';
   @Input() imgLogo = '/assets/images/logo.png';
-  isCollapsed = false;
+  @Input() isCollapsed: any = false;
 }
