@@ -1,0 +1,37 @@
+<ul nz-menu nzTheme="dark" class="listMenu" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+
+  <ng-container *ngFor="let menu of listMenu ; index as i">
+    <li *ngIf="menu.subMenu.length >0 else menuTemplate"
+      nz-submenu 
+      [nzOpen]="i === indexActive ? true : false" 
+      [nzTitle]="menu.title" 
+      [nzIcon]="menu.icon" 
+      class='itemParent hasSub {{menu.path == classActive ? "hasSubActive" : ""}}'>
+      <ul *ngFor="let subMenu of menu.subMenu" >
+        <li nz-menu-item nzMatchRouter>
+          <a [routerLink]="subMenu.path">{{subMenu.title}}</a>
+        </li>
+      </ul>
+    </li>
+    <ng-template #menuTemplate>
+      <li nz-menu-item nzMatchRouter class="noneSub" >
+        <i nz-icon [nzType]="menu.icon"></i>
+        <a [routerLink]="menu.path" >{{isCollapsed == true ? "" : menu.title}}</a>
+      </li>
+    </ng-template>
+
+  </ng-container>
+
+    <!-- <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard" routerLink="/welcome" class="itemParent">
+      <ul>
+        <li nz-menu-item nzMatchRouter>
+          <a routerLink="/welcome">Welcome</a>
+        </li>
+      </ul>
+    </li> -->
+    <!-- <li nz-menu-item routerLink="/employee" >
+      <i nz-icon nzType="mail"></i>
+      <span>employee</span>
+    </li> -->
+    
+  </ul>
