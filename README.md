@@ -1,14 +1,25 @@
-# MinhduNg
+# Minh dư fontend Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
-## Development server
+## Role naming component
+- Component custom sẽ đặt tên có ký hiệu Md ngoài trước. ví dụ Dialog -> MdDialog
+- 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Role Style HTML
 
-## Code scaffolding
+- Các thuộc tính phải được viết theo một thứ tự cụ thể
+- Khi một phần tử có hai thuộc tính trở lên thì biểu diễn mỗi thuộc tính trên 1 dòng
+- Thứ tự sẽ được biểu diễn như sau:
+  - Structural directives
+  - Animations
+  - Static properties
+  - Dynamic properties
+  - Events
+![image](https://user-images.githubusercontent.com/48413548/114309346-0ecd0a80-9b11-11eb-84ba-1f923082e0f9.png)
+- Sử dụng với pipes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
 
 ## Build
 
