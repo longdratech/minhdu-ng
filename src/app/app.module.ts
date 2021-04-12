@@ -14,8 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
-import { SideBarComponent } from './components/sidebar/sidebar.component';
-import { TagNameComponent } from './components/tag-name/tag-name.component';
+import { TagNameComponent } from './common/components/tag-name/tag-name.component';
+// import { AuthGuard } from './common/share';
 
 registerLocaleData(en);
 
@@ -23,7 +23,6 @@ registerLocaleData(en);
 @NgModule({
   declarations: [
     AppComponent,
-    SideBarComponent,
     TagNameComponent,
   ],
   imports: [

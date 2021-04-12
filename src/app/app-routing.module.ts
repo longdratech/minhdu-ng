@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './common/share';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/welcome' },
-  { path: 'welcome', loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule) },
-  { path: 'employee', loadChildren: () => import('./pages/employee/employee.module').then(m => m.EmployeeModule)},
-  // { path: 'employee/list', loadChildren: () => import('./pages/employee/employee.module').then(m => m.EmployeeModule)}
+  // { path: '', loadChildren: './common/modules/login/login.module' , canActivate: [AuthGuard]},
+  // { path: '', pathMatch: 'full', redirectTo: '/welcome', canActivate: [AuthGuard]},
+  // { path: 'login', loadChildren: './common/modules/login/login.module' },
+  // tslint:disable-next-line:max-line-length
+  // { path: '', loadChildren: './common/modules/layout.module.ts#LayoutModule'},
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./common/modules/human-resource/welcome/welcome-routing.module').then(m => m.WelcomeRoutingModule)
+  },
+
 ];
 
 @NgModule({
