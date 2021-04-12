@@ -16,6 +16,7 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { SideBarComponent } from './components/sidebar/sidebar.component';
 import { TagNameComponent } from './components/tag-name/tag-name.component';
+import { BasePopupComponent } from './components/base-popup/base-popup.component';
 
 registerLocaleData(en);
 
@@ -25,6 +26,7 @@ registerLocaleData(en);
     AppComponent,
     SideBarComponent,
     TagNameComponent,
+    BasePopupComponent,
   ],
   imports: [
     BrowserModule,
