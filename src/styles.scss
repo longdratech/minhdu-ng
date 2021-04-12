@@ -1,1 +1,50 @@
 @import "~ng-zorro-antd/ng-zorro-antd.min.css";
+
+// style global paginator component
+.app-paginator{
+    .ant-pagination-item{
+        border: none;
+    }
+    .ant-pagination-item a{
+        transform: scale(0.2);
+        background-color: #B4AEAE;
+        border-radius: 100%;
+    }
+    .ant-pagination-item-active a, .ant-pagination-item:focus a, .ant-pagination-item:hover a{
+        font-weight: bold;
+        background-color: #fff;
+        transform: scale(1);
+    }
+    .ant-pagination-next .ant-pagination-item-link, 
+    .ant-pagination-prev .ant-pagination-item-link{
+        background-color: #7749F8;
+        border: none;
+        width: 65px;
+        position: relative;
+        color: #fff;
+        i{
+            opacity: 0;
+        }
+        &::after{
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+    }
+    .ant-pagination-next .ant-pagination-item-link::after{
+        content: "Sau";
+    }
+    .ant-pagination-prev .ant-pagination-item-link::after{
+        content: "Trước";
+    }
+
+    .ant-pagination-disabled .ant-pagination-item-link, 
+    .ant-pagination-disabled:focus .ant-pagination-item-link, 
+    .ant-pagination-disabled:hover .ant-pagination-item-link{
+        background-color: gray;
+        color: #000;
+    }
+  
+}
