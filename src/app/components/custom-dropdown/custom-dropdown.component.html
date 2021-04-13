@@ -1,10 +1,4 @@
-<a class="dropDown" nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
-  {{test}}
-  <i nz-icon nzType="down"></i>
-</a>
-<nz-dropdown-menu #menu="nzDropdownMenu">
-  <ul nz-menu>
-    <li (click)="getDataDropdown()" nz-menu-item>Nhân viên</li>
-    <li nz-menu-item>Quản lý</li>
-  </ul>
-</nz-dropdown-menu>
+<p id="titleName">{{titleName}}</p>
+<nz-select [(ngModel)]="selectedValue" (ngModelChange)="log($event)" nzAllowClear nzPlaceHolder="Chọn lựa chức vụ">
+  <nz-option *ngFor="let option of optionList" [nzValue]="option" [nzLabel]="option.position"></nz-option>
+</nz-select>

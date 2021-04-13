@@ -1,15 +1,21 @@
-.dropDown {
-  border: 1px solid #CED4DA;
-  border-radius: 4px;
-  width: 548px;
-  height: 36px;
-  padding: 8px 400px 8px 10px;
-  position: relative;
-  color: #ABB5BE;
-
-  i {
-    position: absolute;
-    right: 9px;
-    top: 12px;
-  }
+#titleName{
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 600;
+    &::after{
+        content: '*';
+        color: red;
+        margin-left: 2px;
+    }
+}
+nz-select{
+    width: 548px;
+    font-size: 16px !important;
+}
+::ng-deep .ant-select-selector{
+    height: 36px !important;
+    border-radius: 4px !important;
+}
+::ng-deep .ant-select-item-option-content{
+    font-size: 16px !important;
 }
