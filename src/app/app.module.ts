@@ -5,22 +5,11 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {registerLocaleData} from '@angular/common';
 import en from '@angular/common/locales/en';
-<<<<<<< HEAD
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { IconsProviderModule } from './icons-provider.module';
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { NzMenuModule } from 'ng-zorro-antd/menu';
-import { SideBarComponent } from './components/sidebar/sidebar.component';
-import { TagNameComponent } from './components/tag-name/tag-name.component';
-import { CustomDropdownComponent } from './components/custom-dropdown/custom-dropdown.component';
-=======
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {TagNameComponent} from './common/components/tag-name/tag-name.component';
 import {JwtHelperService, JwtInterceptor, JwtModule} from '@auth0/angular-jwt';
->>>>>>> main
-
+import { CustomDropdownComponent } from './components/custom-dropdown/custom-dropdown.component'
 registerLocaleData(en);
 
 
