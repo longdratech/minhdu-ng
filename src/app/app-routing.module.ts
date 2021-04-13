@@ -1,15 +1,22 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {HumanResourceComponent} from './modules/human-resource/human-resource.component';
+import {AppComponent} from './app.component';
+import {RoleGuard} from './share/guards/role.guard';
+import {Role} from './common/constant/role.constant';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/welcome' },
-  { path: 'welcome', loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule) },
-  { path: 'employee', loadChildren: () => import('./pages/employee/employee.module').then(m => m.EmployeeModule)},
-  // { path: 'employee/list', loadChildren: () => import('./pages/employee/employee.module').then(m => m.EmployeeModule)}
+  {
+    path: 'human-resource',
+    component: HumanResourceComponent,
+    canActivate: [RoleGuard],
+    data: {expectedRole: Role.ADMIN}
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
