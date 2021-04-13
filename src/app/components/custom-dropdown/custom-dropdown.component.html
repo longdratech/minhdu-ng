@@ -1,0 +1,4 @@
+<p id="titleName">{{titleName}}</p>
+<nz-select [(ngModel)]="selectedValue" (ngModelChange)="log($event)" nzAllowClear nzPlaceHolder="Chọn lựa chức vụ">
+  <nz-option *ngFor="let option of optionList" [nzValue]="option" [nzLabel]="option.position"></nz-option>
+</nz-select>

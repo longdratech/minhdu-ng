@@ -9,7 +9,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {TagNameComponent} from './common/components/tag-name/tag-name.component';
 import {JwtHelperService, JwtInterceptor, JwtModule} from '@auth0/angular-jwt';
-
+import { CustomDropdownComponent } from './components/custom-dropdown/custom-dropdown.component'
 registerLocaleData(en);
 
 
@@ -17,6 +17,7 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     TagNameComponent,
+    CustomDropdownComponent,
   ],
   imports: [
     BrowserModule,
