@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compodoc": "npx compodoc -p tsconfig.app.json src"
   },
   "private": true,
   "dependencies": {
@@ -22,11 +23,14 @@
     "@angular/platform-browser": "~11.2.7",
     "@angular/platform-browser-dynamic": "^11.2.9",
     "@angular/router": "^11.2.7",
-    "@aspnet/signalr": "^1.0.27",
+    "@auth0/angular-jwt": "^5.0.2",
     "@ngrx/store": "^11.1.0",
+    "@ngx-formly/core": "^5.5.11",
+    "@ngx-formly/ng-zorro-antd": "^0.0.1",
     "@ngx-pwa/local-storage": "^11.1.0",
     "chart.js": "^3.0.2",
     "js-base64": "^3.6.0",
+    "jwt-decode": "^3.1.2",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "ng-zorro-antd": "^11.4.0",
@@ -58,7 +62,6 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
-    "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.1.5"
   }

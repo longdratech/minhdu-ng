@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 const listFetchMenu  = [
   {
-    path: '/welcome', title: 'dashboard', icon: 'dashboard', subMenu: []
+    path: '/dashboard', title: 'dashboard', icon: 'dashboard', subMenu: []
   },
   {
     path: '/employee', title: 'Nhân viên', icon: 'user',
