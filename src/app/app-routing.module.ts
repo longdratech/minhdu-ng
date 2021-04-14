@@ -4,8 +4,13 @@ import {HumanResourceComponent} from './modules/human-resource/human-resource.co
 import {AppComponent} from './app.component';
 import {RoleGuard} from './share/guards/role.guard';
 import {Role} from './common/constant/role.constant';
+import {LoginComponent} from './modules/login/login.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: LoginComponent
+  },
   {
     path: 'human-resource',
     component: HumanResourceComponent,
